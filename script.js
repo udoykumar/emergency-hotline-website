@@ -55,11 +55,11 @@ document
       div.innerHTML = `
             <div class="flex justify-between items-center mx-auto mt-5 bg-gray-200 p-2 rounded-lg">
                 <div class="">
-                    <p class="mb-4 text-lg font-semibold">${hotlineTitle}</p>
-                    <p class="text-lg font-semibold" >${hotlineNumber} </p>
+                    <p class="mb-4 text-lg font-semibold text-nowrap">${hotlineTitle}</p>
+                    <p class="font-semibold" >${hotlineNumber} </p>
                 </div>
                 <div>
-                    <p class="text-lg font-semibold">${currentTime12Hour}</p>
+                    <p class="font-semibold">${currentTime12Hour}</p>
                 </div>
             </div>
       `;
