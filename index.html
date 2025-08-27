@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <link href="./src/output.css" rel="stylesheet">
+    <!-- font awesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Emergency Hotline Website</title>
+
 
 </head>
 
@@ -19,15 +25,16 @@
                     <p class="text-[#006747]">Emergency <br>Service</p>
                 </div>
                 <div class="flex gap-6">
-                    <div class="flex items-center gap-1">
-                        <p id="heart-count">0</p>
+                    <div class="flex items-center gap-2">
+                        <p id="heart-count" class="font-semibold">0</p>
                         <img width="30" src="./assets/heart.png" alt="">
                     </div>
                     <div class="flex items-center gap-1">
-                        <p id="star-count">100</p>
+                        <p id="star-count" class="font-semibold">100</p>
                         <img width="30" src="./assets/coin.png" alt="">
                     </div>
-                    <button class="bg-green-600 px-6 py-2 rounded-2xl text-white"><span id="copy-count">0</span>
+                    <button class="bg-green-600 px-6 py-2 rounded-2xl text-white"><span id="copy-count"
+                            class="font-semibold">0</span>
                         Copy</button>
                 </div>
             </div>
@@ -185,7 +192,7 @@
                             <div class="bg-red-200 w-15 h-15 rounded-full flex justify-center items-center">
                                 <img width="40" src="./assets/emergency.png" alt="">
                             </div>
-                            <i class="fa-regular fa-heart heart-btn"></i>
+                            <i class="fa-regular fa-heart heart-btn text-2xl"></i>
                         </div>
                         <div>
                             <h1 class="text-xl font-bold py-2">Anti-Corruption Helpline</h1>
@@ -281,6 +288,22 @@
                     </div>
                 </div>
             </div>
+            <aside class=" lg:col-span-3 col-span-6">
+                <div class=" w-full pb-20 mx-auto px-5 shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
+                    <div>
+                        <div class="flex justify-between">
+                            <div class="">
+                                <p><i class="fa-solid fa-clock text-2xl"></i> Call History</p>
+                            </div>
+                            <button id="clearBtn"
+                                class="px-7 py-2 bg-green-700 rounded-xl scale-100 hover:scale-90 text-white">Clear</button>
+                        </div>
+                    </div>
+                    <div id="asid-card-container">
+
+                    </div>
+                </div>
+            </aside>
         </div>
     </section>
 
