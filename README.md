@@ -3,30 +3,30 @@
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
 
    answer :
-   getElementById("id") → নির্দিষ্ট id এর একটা element দেয়।
-   getElementsByClassName("class") → ওই class এর সব element রিটার্ন করে HTMLCollection (live list) আকারে।
-   querySelector("css-selector") → প্রথম ম্যাচ হওয়া element দেয়।
-   querySelectorAll("css-selector") → সবগুলো ম্যাচ হওয়া element দেয় NodeList (not live) আকারে।
+   getElementById("id") → নির্দিষ্ট id এর একটা element দিবে।
+   getElementsByClassName("class") → ওই class এর সব element রিটার্ন করে HTMLCollection আকারে live collection DOM আপডেট হওয়ার সাথে সাথে আপডেট হবে
+   querySelector("css-selector") → প্রথম ম্যাচ হওয়া element দেয়। (class, id) সব css selector ধরা যাই।
+   querySelectorAll("css-selector") → সবগুলো ম্যাচ হওয়া element দেয় NodeList (not live) আকারে। DOM আপডেট হওয়ার সাথে সাথে আপডেট হবে না।
 
 2. How do you **create and insert a new element into the DOM**?
 
    answer:
    ```js
    const div = document.createElement("div");
-   div.textContent = "Hello World!";
+   div.innerText = "Hello World!";
    document.body.appendChild(div);
    ```
 
    createElement → নতুন element বানায়।
-   appendChild (বা prepend, before, after) → DOM এ ঢোকায়।
+   appendChild (বা prepend, before, after) এভাবে করে DOM এ ঢোকায়।
 
 3. What is **Event Bubbling** and how does it work? 4. What is **Event Delegation** in JavaScript? Why is it useful? 5. What is the difference between **preventDefault() and stopPropagation()** methods?
 
    answer:
   ```js
- document.getElementById("list").addEventListener("click", (e) => {
-   if(e.target.tagName === "LI"){
-   console.log("Clicked:", e.target.textContent);
+ document.getElementById("cardContainer").addEventListener("click", (e) => {
+   if(e.target.className === "cardBtn"){
+   console.log("Clicked cardBtn:", e.target);
    }
    });
 ```
@@ -35,9 +35,9 @@
 
    answer:
  ```js
-    document.getElementById("list").addEventListener("click", (e) => {
-     if(e.target.tagName === "LI"){
-        console.log("Clicked:", e.target.textContent);
+    document.getElementById("cardContainer").addEventListener("click", (e) => {
+     if(e.target.tagName === "cardBtn"){
+        console.log("Clicked cardBtn:", e.target);
       }
      });
   ```
