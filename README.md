@@ -36,7 +36,7 @@
    answer:
  ```js
     document.getElementById("cardContainer").addEventListener("click", (e) => {
-     if(e.target.className.includes('cardBtn){
+     if(e.target.className.includes("cardBtn"){
         console.log("Clicked cardBtn:", e.target);
       }
      });
